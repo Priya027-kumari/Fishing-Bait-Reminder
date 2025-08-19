@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fishing Reminder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>🎣 Fishing Reminder</h1>
+
+    <form id="reminder-form">
+      <label>
+        Title
+        <input type="text" id="title" placeholder="e.g., Sunrise fishing" required />
+      </label>
+
+      <label>
+        Date & Time
+        <input type="datetime-local" id="when" required />
+      </label>
+
+      <label>
+        Notes (optional)
+        <textarea id="notes" placeholder="Bring bait, check tide…"></textarea>
+      </label>
+
+      <button type="submit">Add Reminder</button>
+    </form>
+
+    <section class="tips">
+      <button id="notify-btn" type="button">Enable Notifications</button>
+      <p class="muted">Browser notifications help alert you at the exact time.</p>
+    </section>
+
+    <h2>Upcoming Reminders</h2>
+    <ul id="list"></ul>
+
+    <footer>
+      <p class="muted">Data is saved in your browser (localStorage).</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
